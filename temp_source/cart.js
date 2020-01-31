@@ -1,4 +1,3 @@
-
 import summary from 'cartSummary';
 import React from 'react';
 import features from 'app.js';
