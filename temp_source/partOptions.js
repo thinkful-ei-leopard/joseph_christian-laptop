@@ -1,4 +1,5 @@
 import React from 'react'
+import slugify from 'slugify'
 export class partOptions extends React.Component {
     // state = {
     //   selected: {
@@ -21,10 +22,10 @@ export class partOptions extends React.Component {
     //   }
     // };
   
-    const partOptions = () => {
-      const itemHash = slugify(JSON.stringify(item));
     
-   render()
+    
+   render() {
+      const itemHash = slugify(JSON.stringify(item));
     return (
       <div key={itemHash} className="feature__item">
         <input
@@ -41,4 +42,5 @@ export class partOptions extends React.Component {
       </div>
     );
   }
+}
 }
