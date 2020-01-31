@@ -6,9 +6,14 @@ const USCurrencyFormat = new Intl.NumberFormat('en-US', {
     currency: 'USD'
   });
 
+class cartSummary extends React.Component {
 
-
-const summary = Object.keys(this.state.selected).map((feature, idx) => {
+render() {
+  const total = Object.keys(this.state.selected).reduce((acc, curr) => 
+    acc + this.state.selected[curr].cost,
+      0
+    );
+  const summary = Object.keys(this.state.selected).map((feature, idx) => {
     const featureHash = feature + '-' + idx;
     const selectedOption = this.state.selected[feature];
 
@@ -21,5 +26,10 @@ const summary = Object.keys(this.state.selected).map((feature, idx) => {
         </div>
       </div>
     );
-  });
-  export default summary;
+    });
+    return (
+      summary
+    );
+  }
+}
+  export default cartSummary;
