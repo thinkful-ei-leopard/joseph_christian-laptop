@@ -89,9 +89,9 @@ class App extends Component {
         </div>
       );
     });
-    //object.keys(this.state.selected) ['Processor',... ]
-    const total = Object.keys(this.state.selected).reduce((acc, curr) => 
-    acc + this.state.selected[curr].cost,
+
+    const total = Object.keys(this.state.selected).reduce(
+      (acc, curr) => acc + this.state.selected[curr].cost,
       0
     );
 

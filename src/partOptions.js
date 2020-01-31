@@ -1,6 +1,10 @@
 import React from 'react'
 import slugify from 'slugify'
-export class partOptions extends React.Component {
+import item from './parts.js'
+import feature from './App.js'
+import USCurrencyFormat from './'
+
+export class PartOptions extends React.Component {
     // state = {
     //   selected: {
     //     Processor: {
@@ -42,5 +46,4 @@ export class partOptions extends React.Component {
       </div>
     );
   }
-}
 }

@@ -1,7 +1,7 @@
 import React , { Component } from 'react';
 import slugify from 'slugify';
 
-export class parts extends Component {
+export class Parts extends Component {
     
   render() {
     const features = Object.keys(this.props.features).map((feature, idx) => {

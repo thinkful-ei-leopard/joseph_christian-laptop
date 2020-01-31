@@ -1,16 +1,21 @@
-import summary from 'cartSummary';
+import summary from './cartSummary';
 import React from 'react';
-import features from 'app.js';
-import USCurrencyFormat from 'app.js';
-
-export class cart extends React.Component {
 
 
-const total = Object.keys(this.state.selected).reduce(
-    (acc, curr) => acc + this.state.selected[curr].cost, 0
-  );
+const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD'
+});
+
+export class Cart extends React.Component {
+
+
+
 
 render() {
+  const total = Object.keys(this.state.selected).reduce(
+    (acc, curr) => acc + this.state.selected[curr].cost, 0
+  );
   return (
         <section className="main__summary">
           <h2>Your cart</h2>
